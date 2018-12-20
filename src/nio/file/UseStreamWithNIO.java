@@ -26,7 +26,7 @@ public class UseStreamAPIWithNIO {
 		 * 1.Convert BufferedReader to stream using lines() method
 		 */
 		try (BufferedReader buffReader = new BufferedReader(new FileReader(
-				"C:\\Users\\IBM_ADMIN\\eclipse-workspace\\JavaCertPrepBook\\src\\src\\nio\\file\\BufferedReaderToStream"))) {
+				"BufferedReaderToStream"))) {
 
 			buffReader.lines().forEach(line -> System.out.println(line));
 
@@ -42,7 +42,7 @@ public class UseStreamAPIWithNIO {
 		 * 2.NIO File Stream. Convert file to stream using Files.lines()
 		 */
 		try (Stream<String> lines = Files.lines(Paths.get(
-				"C:\\Users\\IBM_ADMIN\\eclipse-workspace\\JavaCertPrepBook\\src\\src\\nio\\file\\NIOFileStream"))) {
+				"NIOFileStream"))) {
 
 			lines.forEach(line -> System.out.println(line));
 
@@ -56,7 +56,7 @@ public class UseStreamAPIWithNIO {
 		 * ArrayList to stream
 		 */
 		Path file = Paths.get(
-				"C:\\Users\\IBM_ADMIN\\eclipse-workspace\\JavaCertPrepBook\\src\\src\\nio\\file\\FileToArraylistToStream");
+				"FileToArraylistToStream");
 		List<String> fileListArray;
 
 		try {
