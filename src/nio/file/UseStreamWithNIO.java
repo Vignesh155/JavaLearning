@@ -68,6 +68,12 @@ public class UseStreamAPIWithNIO {
 					// .filter(line -> line.contains("Convert"))
 					.forEach(line -> System.out.println(line));
 
+			long wordCount = fileListArray.stream()
+					.flatMap(line -> Stream.of(line.split(" ")))
+					.filter(word -> word.contains("Convert")).count();
+
+			System.out.println("Word count: " + wordCount);
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
