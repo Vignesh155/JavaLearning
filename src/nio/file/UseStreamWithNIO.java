@@ -68,7 +68,7 @@ public class UseStreamAPIWithNIO {
 					// .filter(line -> line.contains("Convert"))
 					.forEach(line -> System.out.println(line));
 
-			// Get wordcount
+			// Get wordcount with stream API
 			long wordCount = fileListArray.stream()
 					.flatMap(line -> Stream.of(line.split(" ")))
 					.filter(word -> word.contains("Convert")).count();
